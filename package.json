@@ -1,9 +1,11 @@
 {
   "name": "@realdennis/next-frame",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "await until next frame",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
