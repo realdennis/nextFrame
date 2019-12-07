@@ -19,6 +19,15 @@ $ npm install @realdennis/next-frame
 
 It expose three methods `nextFrame` / `perFrameReduccer` / `perFrameMapper` for difference purpose.
 
+```javascript
+// ESModule
+import {
+  nextFrame,
+  perFrameReduccer,
+  perFrameMapper
+} from "https://unpkg.com/@realdennis/next-frame/src/index.js";
+```
+
 ### nextFrame
 
 ```javascript
