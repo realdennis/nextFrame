@@ -4,8 +4,7 @@ A promisify of `window.requestAnimationFrame`, you can use this in your async fu
 
 ## Why use nextFrame instead of requestAnimationFrame?
 
-Since requestAnimationFrame is a callback usage, if we want to deal with complexity flow, the callback hell would be sufferd.
-
+Since requestAnimationFrame is a callback usage, if we want to deal with complexity flow, the callback hell would be crap.
 
 ## Installation
 
