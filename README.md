@@ -1,3 +1,5 @@
+![](https://github.com/realdennis/nextFrame/workflows/Node%20CI/badge.svg)
+
 # nextFrame
 
 A promisify of `window.requestAnimationFrame`, you can use this in your async function to slice the long callback bottleneck to improve performance and avoid frame drop in your callback.
