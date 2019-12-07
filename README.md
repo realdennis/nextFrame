@@ -1,0 +1,75 @@
+# nextFrame
+
+A promisify of `window.requestAnimationFrame`, you can use this in your async function to slice the long callback bottleneck to improve performance and avoid frame drop in your callback.
+
+## Installation
+
+```bash
+$ npm install @realdennis/next-frame
+```
+
+## Why use nextFrame instead of requestAnimationFrame?
+
+Since requestAnimationFrame is a callback usage, if we want to deal with complexity flow, the callback hell would be suffer.
+
+## Usage
+
+It expose three methods `nextFrame` / `perFrameReduccer` / `perFrameMapper` for difference purpose.
+
+### nextFrame
+
+```javascript
+import { nextFrame } from '@realdennis/next-frame';
+
+window.onclick = async ()=>{
+    await nextFrame()
+    /**
+     * ... something click callback step1
+     */
+    chunk1();
+    await nextFrame()
+    /**
+     * ... something click callback step2
+     */
+    chunk2();
+    await nextFrame()
+    /**
+     * ... something click callback step3
+     */
+    chunk3()
+}
+```
+These 3 chunk will be execute in 3 serial different frame, and share the same closure variable, race-safe.
+
+
+### perFrameReducer
+
+It provides `perFrameReducer`, an array reduce callback, reduce the callback array to promise, and schedule it all to different frame like above.
+
+```javascript
+import { perFrameReducer } from '@realdennis/next-frame';
+
+window.onclick = async ()=>{
+    await [chunk1,chunk2,chunk3].reduce(perFrameReducer)
+    console.log('Done')
+}
+```
+
+### perFrameMapper
+
+It provides `perFrameMapper`, an array map callback, map the callback array to promised callback array, and each promised callback has itself start frame.
+
+```javascript
+import { perFrameMapper } from '@realdennis/next-frame';
+
+window.onclick = async (){
+    const scheduledChunks =  [chunk1,chunk2,chunk3].map(perFrameMapper);
+    //[chunk1InFrame1func , chunk2InFrame2func, chunk3InFrame3func]
+    Promise.all(scheduledChunks.map(cb=>cb()))
+        .then(console.log('concurrent done'));
+}
+```
+
+## License
+
+LICENSE MIT © 2019 realdennis

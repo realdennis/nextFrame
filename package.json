@@ -1,0 +1,21 @@
+{
+  "name": "after-frame",
+  "version": "0.0.1",
+  "description": "await until next frame",
+  "main": "src/index.js",
+  "repository": "https://github.com/realdennis/nextFrame.git",
+  "author": "realdennis",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/runtime": "^7.7.5",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
