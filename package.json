@@ -10,16 +10,15 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "microbundle",  
+    "build": "microbundle",
     "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
-    "@babel/plugin-transform-runtime": "^7.7.5",
     "@babel/preset-env": "^7.7.5",
-    "@babel/runtime": "^7.7.5",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "regenerator-runtime": "^0.13.3"
   }
 }

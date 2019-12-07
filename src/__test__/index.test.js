@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime";
 import { nextFrame, perFrameReducer, perFrameMapper } from "../index.js";
 
 it("nextFrame should promisify", async () => {
