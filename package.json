@@ -1,6 +1,6 @@
 {
   "name": "@realdennis/next-frame",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "await until next frame",
   "type": "module",
   "source": "src/index.js",
