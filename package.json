@@ -2,6 +2,7 @@
   "name": "@realdennis/next-frame",
   "version": "0.0.2",
   "description": "await until next frame",
+  "type": "module",
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
