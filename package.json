@@ -2,12 +2,15 @@
   "name": "@realdennis/next-frame",
   "version": "0.0.1",
   "description": "await until next frame",
-  "main": "src/index.js",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "repository": "https://github.com/realdennis/nextFrame.git",
   "author": "realdennis",
   "license": "MIT",
   "private": false,
   "scripts": {
+    "build": "microbundle",  
     "test": "jest"
   },
   "devDependencies": {
@@ -16,6 +19,7 @@
     "@babel/preset-env": "^7.7.5",
     "@babel/runtime": "^7.7.5",
     "babel-jest": "^24.9.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "microbundle": "^0.11.0"
   }
 }
