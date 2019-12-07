@@ -1,3 +1,6 @@
+<span class="badge-github-actions"><a href="https://github.com/realdennis/nextFrame" title="View this project on GitHub"><img src="https://github.com/realdennis/nextFrame/workflows/Node%20CI/badge.svg" alt="GitHub Actions" /></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/@realdennis/next-frame" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/@realdennis/next-frame.svg" alt="NPM downloads" /></a></span>
+
 # nextFrame
 
 A promisify of `window.requestAnimationFrame`, you can use this in your async function to slice the long callback bottleneck to improve performance and avoid frame drop in your callback.
