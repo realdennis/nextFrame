@@ -25,7 +25,7 @@ import {
   nextFrame,
   perFrameReduccer,
   perFrameMapper
-} from "https://unpkg.com/@realdennis/next-frame/src/index.js";
+} from "https://unpkg.com/@realdennis/next-frame/dist/index.mjs";
 ```
 
 ### nextFrame
