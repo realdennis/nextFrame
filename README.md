@@ -2,15 +2,16 @@
 
 A promisify of `window.requestAnimationFrame`, you can use this in your async function to slice the long callback bottleneck to improve performance and avoid frame drop in your callback.
 
+## Why use nextFrame instead of requestAnimationFrame?
+
+Since requestAnimationFrame is a callback usage, if we want to deal with complexity flow, the callback hell would be sufferd.
+
+
 ## Installation
 
 ```bash
 $ npm install @realdennis/next-frame
 ```
-
-## Why use nextFrame instead of requestAnimationFrame?
-
-Since requestAnimationFrame is a callback usage, if we want to deal with complexity flow, the callback hell would be suffer.
 
 ## Usage
 

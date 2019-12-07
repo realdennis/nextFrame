@@ -1,5 +1,5 @@
 {
-  "name": "after-frame",
+  "name": "@realdennis/next-frame",
   "version": "0.0.1",
   "description": "await until next frame",
   "main": "src/index.js",
