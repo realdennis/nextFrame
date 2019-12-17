@@ -24,7 +24,8 @@ export const nextFrameFactory = () => {
   return { cancelNextFrame: cancel, nextFrame: next };
 };
 
-export const { nextFrame } = nextFrameFactory();
+const { nextFrame } = nextFrameFactory();
+export { nextFrame };
 
 export const perFrameReducer = async (_prev, next) => {
   await nextFrame();

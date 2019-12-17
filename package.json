@@ -1,6 +1,6 @@
 {
   "name": "@realdennis/next-frame",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "await until next frame",
   "type": "module",
   "files": [
