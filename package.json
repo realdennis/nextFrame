@@ -8,7 +8,7 @@
   ],
   "source": "src/index.js",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "repository": "https://github.com/realdennis/nextFrame.git",
   "author": "realdennis",
   "license": "MIT",
