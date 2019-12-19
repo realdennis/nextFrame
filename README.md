@@ -84,7 +84,7 @@ const aLargeTaskCallback = async ()=>{
 // In other place, condition trigger
 useEffect(() => {
     aLargeTaskCallback()
-    return () => stopNextFrame();
+    return () => cancelNextFrame();
 },[])
 // Some kind like this
 // component is unmounted, and we want to clear the task we schedule in the future
