@@ -9,6 +9,7 @@
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/realdennis/nextFrame.git",
   "author": "realdennis",
   "license": "MIT",
@@ -16,7 +17,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest -c ./jest.config.json",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn test && yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
