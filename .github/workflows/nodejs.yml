@@ -1,25 +1,22 @@
 name: Node CI
-
 on: [push]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@master
+    - name: Use Node.js 12
+      uses: actions/setup-node@master
       with:
-        node-version: ${{ matrix.node-version }}
-    - uses: borales/actions-yarn@v2.0.0
+        node-version: 12.0.0
+    - uses: borales/actions-yarn@master
       with:
         cmd: install
-    - uses: borales/actions-yarn@v2.0.0
+    - uses: borales/actions-yarn@master
       with:
         cmd: test 
+    - name: Semantic Release
+      uses: cycjimmy/semantic-release-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
